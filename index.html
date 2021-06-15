@@ -21,5 +21,19 @@
 
     </ul>
 </body>
+<script>
+    const number = Math.floor(Math.random() * 10 + 1);
+    let guess = prompt('Guess a number between 1 and 10');
+    let attempts = 1;
+    while (number != guess && attempts < 3) {
+        attempts++;
+        guess = prompt(`Wrong!!! Try Again!`);
+    }
+    if (number == guess) {
+        alert(`Success, the number was ${number}! Attempts: ${attempts}`);
+    } else if (attempts == 3) {
+        alert(`Sorry, you failed to guess the number in three attempts. The number was ${number}!`);
+    }
+</script>
 
 </html>
